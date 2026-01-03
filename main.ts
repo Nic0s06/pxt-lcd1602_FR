@@ -166,6 +166,41 @@ setcmd(0x0C)
 else
 setcmd(0x08)
 }
+/**
+ * Teste plusieurs combinaisons de mapping RS/EN/BK
+ */
+//% blockId="LCD_testMapping" block="Test LCD mappings"
+export function testMapping(): void {
+    // Liste des combinaisons à tester : [RS, EN, BK]
+    let combos: number[][] = [
+        [0x00, 0x04, 0x08], // mapping 1
+        [0x01, 0x08, 0x04], // mapping 2
+        [0x01, 0x04, 0x08], // mapping 3
+        [0x00, 0x08, 0x04], // mapping 4
+        [0x01, 0x02, 0x08], // mapping 5
+    ]
+
+    let ok = false
+    for (let i = 0; i < combos.length && !ok; i++) {
+        RS = combos[i][0]
+        E  = combos[i][1]
+        BK = combos[i][2]
+
+        // Essai simple : effacer, allumer backlight, écrire "A"
+        setcmd(0x01)
+        set_backlight(1)
+        basic.pause(50)
+        putString("A", 0, 0)
+
+        // On laisse 1s pour observer
+        basic.pause(1000)
+
+        // Si tu vois "A", tu peux noter l’indice et sortir
+        basic.showNumber(i)
+        ok = true // ici tu devrais arrêter manuellement si ça marche
+    }
+}
+
 function printChar(ch: number, x: number, y: number): void {
 if (x >= 0) {
 let a = 0x80
@@ -184,3 +219,4 @@ setdat(ch)
 */
 //% blockId="LCD_putString" block="LCD afficher la chaîne %s|sur x:%x|y:%y"
 //% weight=49 blockExternalInputs=true x.min=0 x.max=15 y.min=0 y.max=1
+
