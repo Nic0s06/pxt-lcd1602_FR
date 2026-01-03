@@ -4,11 +4,13 @@ LCD1602液晶microbit扩展包 （以修改为支持和兼容LCD2004）
 
 forked from below 2 repository
 
+
 https://github.com/lioujj/pxt-lcd1602 (main and most functions)
 
 https://github.com/microbit-makecode-packages/I2CLCD1620_cn (Shift Left and Shift Right)
 
 [2018/10/30]: 新增加”自动设置LCD1602 I2C地址“积木块。（原先只在下拉框提供5个地址选项来初始化I2C地址，以及直接输入数字来初始化I2C地址，共两个积木块来初始化液晶。）
+[2026/01/03] :je tente un fork il semble en effet que le lcd recu ne soit pas bien mapper
 
 ## MIT
 
