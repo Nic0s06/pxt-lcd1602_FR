@@ -1,0 +1,15 @@
+{
+"lcd1602|block": "Écran LCD1602",
+"lcd1602.setAddress|block": "Définir l'adresse I2C de l'écran LCD1602 à %myAddr",
+"lcd1602.setAddress2|block": "Définir l'adresse I2C de l'écran LCD1602 à %myAddr",
+"lcd1602.setAddress3|block": "Définition automatique de l'adresse I2C de l'écran LCD1602",
+"lcd1602.putString|block": "Chaîne d'affichage LCD %s aux coordonnées x:%x|y:%y",
+"lcd1602.putNumber|block": "Nombre d'affichage LCD %n aux coordonnées x:%x|y:%y",
+"lcd1602.on_off.on|block": "Activé",
+"lcd1602.on_off.off|block": "Éteint",
+"lcd1602.visibled.visible|block": "Affichage", "lcd1602.visibled.invisible|block":"Masquer",
+"lcd1602.set_LCD_Show|block": "Définir la chaîne %show",
+"lcd1602.set_backlight|block": "Activer le rétroéclairage LCD %on",
+"lcd1602.clear|block": "Effacer l'écran LCD",
+"lcd1602.shl|block": "Décaler l'écran LCD vers la gauche",
+"lcd1602.shr|block": "Décaler l'écran LCD vers la droite"}
