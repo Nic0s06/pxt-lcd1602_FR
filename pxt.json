@@ -1,6 +1,6 @@
 {
     "name": "lcd1602",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "Kit d'extension LCD1602 pour micro-bit",
     "license": "MIT",
     "dependencies": {
