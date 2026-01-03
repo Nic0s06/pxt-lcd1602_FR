@@ -12,10 +12,15 @@ namespace lcd1602 {
     let RS = 0x00
     let E = 0x04
     */
+	/* test 2
 	let BK = 0x04    // backlight sur P2
 	let RS = 0x01    // RS sur P0
 	let E = 0x08     // EN sur P3
-
+*/
+	let BK = 0x08    // backlight sur P3
+	let RS = 0x01    // RS sur P0
+	let E = 0x04     // EN sur P2
+	
     function setReg(dat: number): void {
         pins.i2cWriteNumber(LCD_I2C_ADDR, dat, NumberFormat.UInt8BE, false)
         basic.pause(1)
@@ -244,4 +249,5 @@ function send(dat: number): void {
         setcmd(0x1C)
     }
 }
+
 
