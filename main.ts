@@ -44,7 +44,8 @@ send(cmd)
 send(cmd << 4)
 }
 function setdat(dat: number): void {
-RS = 1 send(dat)
+RS = 1 
+send(dat)
 send(dat << 4)
 }
 export enum I2C_ADDR {
@@ -73,7 +74,8 @@ invisible = 0
 }
 function setI2CAddress(): void {
 setcmd(0x33)
-basic.pause(5) send(0x30)
+basic.pause(5)
+send(0x30)
 basic.pause(5)
 send(0x20)
 basic.pause(5)
@@ -219,4 +221,5 @@ setdat(ch)
 */
 //% blockId="LCD_putString" block="LCD afficher la chaîne %s|sur x:%x|y:%y"
 //% weight=49 blockExternalInputs=true x.min=0 x.max=15 y.min=0 y.max=1
+
 
